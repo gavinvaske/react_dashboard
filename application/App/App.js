@@ -1,11 +1,13 @@
 import React from 'react';
 import Dashboard from '../Dashboard/Dashboard';
+import { Route, Routes } from 'react-router-dom';
+import LoginPortal from '../LoginPortal/LoginPortal';
 
 export default function App(props) {
     return (
-        <React.Fragment>
-            <h1>Welcome to the Start of Something Beautiful.</h1>
-            <Dashboard></Dashboard>
-        </React.Fragment>
-    )
+        <Routes>
+            <Route path='' element={<Dashboard />}></Route>
+            <Route path='/login' element={<LoginPortal />}></Route>
+        </Routes>
+    );
 }
